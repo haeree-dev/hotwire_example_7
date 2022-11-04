@@ -1,0 +1,2 @@
+<%= turbo_stream.prepend "todos", partial: "todos/todo", locals: { todo: @todo } %>
+<%= turbo_stream.update 'new_todo', "" %>

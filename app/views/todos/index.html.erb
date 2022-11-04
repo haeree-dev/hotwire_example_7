@@ -1,0 +1,17 @@
+<main class="container">
+
+    <div class="header">
+      <h1>Todo 리스트</h1>
+      <%= link_to "todo 등록하기",
+                  new_todo_path,
+                  data: { turbo_frame: 'new_todo' },
+                  class: "btn btn--primary" %>
+    </div>
+
+  <%= turbo_frame_tag "new_todo" do %>
+  <% end %>
+
+  <%= turbo_frame_tag "todos" do %>
+  <%= render @todo %>
+    <%end %>
+</main>
